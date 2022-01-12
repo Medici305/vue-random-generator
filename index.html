@@ -9,10 +9,13 @@
 </head>
 <body>
     <div id="root">
-        
+        <img :class="gender" :src="picture" :alt="`${firstName} ${lastName}`">
+        <h1>{{firstName}} {{lastName}}</h1>
+        <h3>Email: {{email}}</h3>
+        <button v-on:click="getUser()" :class="gender">Generate User</button>
     </div>    
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="app.js"></script>
+    <script src="https://unpkg.com/vue@3.2.9/dist/vue.global.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
